@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:75:"E:\xampp\htdocs\qxhat\public/../application/index\view\introduce\index.html";i:1508568474;s:66:"E:\xampp\htdocs\qxhat\public/../application/index\view\common.html";i:1508569030;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:75:"E:\xampp\htdocs\qxhat\public/../application/index\view\introduce\index.html";i:1508568474;s:66:"E:\xampp\htdocs\qxhat\public/../application/index\view\common.html";i:1508572201;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -16,10 +16,10 @@
 <nav class="navbar navbar-default">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="<?php echo url('/'); ?>">
                 <img alt="Brand" src="/static/images/logo.png">
             </a>
-            <a class="brand_name" href="">虔信草帽厂</a>
+            <a class="brand_name" href="<?php echo url('/'); ?>">虔信草帽厂</a>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
