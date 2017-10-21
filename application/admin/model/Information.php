@@ -9,6 +9,7 @@ class Information extends Model{
         return $information_list=$this->db()
             ->alias('a')
             ->join('qxhat_information_category c','a.category_id=c.category_id')
+            ->order('update_time desc')
             ->paginate(10);
     }
     public function add($data,$savename){
@@ -27,10 +28,9 @@ class Information extends Model{
         $res=$this->db()->where('id',$id)->update($update);
         return $res;
     }
-    public function edit($data,$savename){
-        $data['thumb']=$savename;
+    public function edit($data){
         $res=$this->db()
-            ->where($data['id'])
+            ->where('id',intval($data['id']))
             ->update($data);
         return $res;
     }

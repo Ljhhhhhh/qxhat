@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:76:"E:\xampp\htdocs\qxhat\public/../application/admin\view\information\edit.html";i:1507276442;s:66:"E:\xampp\htdocs\qxhat\public/../application/admin\view\header.html";i:1507276203;s:64:"E:\xampp\htdocs\qxhat\public/../application/admin\view\menu.html";i:1507168050;s:66:"E:\xampp\htdocs\qxhat\public/../application/admin\view\footer.html";i:1507097252;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:76:"E:\xampp\htdocs\qxhat\public/../application/admin\view\information\edit.html";i:1507276442;s:66:"E:\xampp\htdocs\qxhat\public/../application/admin\view\header.html";i:1507276203;s:64:"E:\xampp\htdocs\qxhat\public/../application/admin\view\menu.html";i:1507600780;s:66:"E:\xampp\htdocs\qxhat\public/../application/admin\view\footer.html";i:1507097252;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -60,6 +60,14 @@
 <!--/_header 作为公共模版分离出去--><!--_menu 作为公共模版分离出去-->
 <aside class="Hui-aside">
     <div class="menu_dropdown bk_2">
+        <dl>
+            <dt><i class="Hui-iconfont">&#xe720;</i> 关于我们<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a href="<?php echo url('About/index'); ?>" title="关于我们">关于我们</a></li>
+                </ul>
+            </dd>
+        </dl>
         <dl id="menu-article">
             <dt><i class="Hui-iconfont">&#xe616;</i> 资讯管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
@@ -72,9 +80,9 @@
             <dt><i class="Hui-iconfont">&#xe620;</i> 产品管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a href="product-brand.html" title="品牌管理">品牌管理</a></li>
-                    <li><a href="product-category.html" title="分类管理">分类管理</a></li>
-                    <li><a href="product-list.html" title="产品管理">产品管理</a></li>
+                    <li><a href="<?php echo url('productBrand/index'); ?>" title="品牌管理">品牌管理</a></li>
+                    <li><a href="<?php echo url('productStyle/index'); ?>" title="分类管理">分类管理</a></li>
+                    <li><a href="<?php echo url('product/index'); ?>" title="产品管理">产品管理</a></li>
                 </ul>
             </dd>
         </dl>

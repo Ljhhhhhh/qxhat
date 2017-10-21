@@ -18,13 +18,13 @@ class Login extends Controller{
             }
             $res=$this->db->login(input('post.'));
             if($res){
-                $this->success('登录成功','/admin/index.html');exit;
+                $this->success('登录成功','/admin/index');exit;
             }else{
                 $this->error("登录失败");exit;
             }
         }
         if(session('?admin_id')){
-            return redirect('/admin/index.html');
+            return redirect('/admin/index');
         }
         return $this->fetch();
     }

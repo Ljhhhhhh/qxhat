@@ -70,7 +70,7 @@ class Product extends Common
             $res=$this->db->doAdd($data);
             if($res){
                 Model('ProductImage')->setImage($res_img_id,$res);
-                $this->success('添加产品成功','product/index.html');
+                $this->success('添加产品成功','product/index');
             }else{
                 $this->error('添加失败，请重新添加');
             }
@@ -83,7 +83,7 @@ class Product extends Common
         $product_info=$this->db->find($id);
         $brand = Model('productBrand')->select();
         $style = Model('productStyle')->select();
-        $images=Model('productImage')->where(['images_id'=>$id])->select();
+        $images=Model('productImage')->where(['product_id'=>$id])->select();
         return $this->fetch('',[
            'product'=>$product_info,
             'style'=>$style,
@@ -120,7 +120,7 @@ class Product extends Common
             Model('ProductImage')->setImage($res_img_id,$data['id']);
             $res=$this->db->update($data);
             if($res){
-                $this->success('更新成功','product/index.html');
+                $this->success('更新成功','product/index');
             }else{
                 $this->error('更新失败，请重新更新');
             }

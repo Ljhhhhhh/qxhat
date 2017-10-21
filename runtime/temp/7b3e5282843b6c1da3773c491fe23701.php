@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:77:"E:\xampp\htdocs\qxhat\public/../application/admin\view\product_brand\add.html";i:1507509088;s:66:"E:\xampp\htdocs\qxhat\public/../application/admin\view\header.html";i:1507276203;s:64:"E:\xampp\htdocs\qxhat\public/../application/admin\view\menu.html";i:1507342779;s:66:"E:\xampp\htdocs\qxhat\public/../application/admin\view\footer.html";i:1507097252;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:70:"E:\xampp\htdocs\qxhat\public/../application/admin\view\about\join.html";i:1508568064;s:66:"E:\xampp\htdocs\qxhat\public/../application/admin\view\header.html";i:1507276203;s:64:"E:\xampp\htdocs\qxhat\public/../application/admin\view\menu.html";i:1508567834;s:66:"E:\xampp\htdocs\qxhat\public/../application/admin\view\footer.html";i:1507097252;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -64,7 +64,9 @@
             <dt><i class="Hui-iconfont">&#xe720;</i> 关于我们<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a href="<?php echo url('information/index'); ?>" title="关于我们">关于我们</a></li>
+                    <li><a href="<?php echo url('About/index'); ?>" title="关于我们">关于我们</a></li>
+                    <li><a href="<?php echo url('About/join'); ?>" title="关于我们">代理加盟</a></li>
+
                 </ul>
             </dd>
         </dl>
@@ -81,8 +83,8 @@
             <dd>
                 <ul>
                     <li><a href="<?php echo url('productBrand/index'); ?>" title="品牌管理">品牌管理</a></li>
-                    <li><a href="product-category.html" title="分类管理">分类管理</a></li>
-                    <li><a href="product-list.html" title="产品管理">产品管理</a></li>
+                    <li><a href="<?php echo url('productStyle/index'); ?>" title="分类管理">分类管理</a></li>
+                    <li><a href="<?php echo url('product/index'); ?>" title="产品管理">产品管理</a></li>
                 </ul>
             </dd>
         </dl>
@@ -91,48 +93,16 @@
 <div class="dislpayArrow hidden-xs"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>
 <!--/_menu 作为公共模版分离出去-->
 <article class="page-container">
-    <form class="form form-horizontal" id="form-article-add" action="<?php echo url('productBrand/doAdd'); ?>" method="post" enctype='multipart/form-data'>
+    <form class="form form-horizontal" id="form-article-add" action="<?php echo url('about/joinedit'); ?>" method="post" enctype='multipart/form-data'>
         <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>品牌名称：</label>
+            <label class="form-label col-xs-4 col-sm-2">文章内容：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" value="" placeholder="" name="brand_name">
-            </div>
-        </div>
-        <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>品牌英文名称：</label>
-            <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" value="" placeholder="" name="brand_name_en">
-            </div>
-        </div>
-        <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>品牌LOGO：</label>
-            <div class="formControls col-xs-8 col-sm-9" id="uploadForm">
-                <div class="fileinput fileinput-new" data-provides="fileinput" id="exampleInputUpload">
-                    <div class="fileinput-new thumbnail" style="width: 200px;height: auto;max-height:150px;">
-                        <img id='picImg' style="width: 100%;height: auto;max-height: 140px;" src="/lib/fileinput/images/noimage.png" alt=""/>
-                    </div>
-                    <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
-                    <div>
-                        <span class="btn btn-primary radius btn-file">
-                            <span class="fileinput-new">选择文件</span>
-                            <span class="fileinput-exists">换一张</span>
-                            <input type="file" value="" name="brand_logo" id="picID" accept="image/gif,image/jpeg,image/x-png"/>
-                        </span>
-                        <a href="javascript:;" class="btn btn-warning fileinput-exists" data-dismiss="fileinput">移除</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>品牌描述：</label>
-            <div class="formControls col-xs-8 col-sm-9">
-                <textarea name="brand_describe" id="editor" type="text/plain" style="width:100%;height:400px;"></textarea>
+                <textarea name="content" id="editor" type="text/plain" style="width:100%;height:400px;"><?php echo $content['content']; ?></textarea>
             </div>
         </div>
         <div class="row cl">
             <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
-                <button class="btn btn-primary radius" type="submit" id="bbb"><i class="Hui-iconfont">&#xe632;</i> 添加品牌</button>
-                <a class="btn btn-default radius" type="button" href="<?php echo url('productBrand/index'); ?>">&nbsp;&nbsp;取消&nbsp;&nbsp;</a>
+                <button class="btn btn-primary radius" type="submit" id="bbb"><i class="Hui-iconfont">&#xe632;</i> 发布文章</button>
             </div>
         </div>
     </form>

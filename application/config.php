@@ -62,7 +62,7 @@ return [
     // 禁止访问模块
     'deny_module_list' => ['common'],
     // 默认控制器名
-    'default_controller' => 'Index',
+    'default_controller' => 'Product',
     // 默认操作名
     'default_action' => 'index',
     // 默认验证器
@@ -238,4 +238,10 @@ return [
         'length'=>4,
         'useCurve'=>false
     ],
+    'email'=>[
+        'host'=>'smtp.163.com',
+        'port'=>'25',
+        'username'=>'13216698987@163.com',
+        'password'=>'Ljh19950615',
+    ]
 ];

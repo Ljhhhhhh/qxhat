@@ -12,4 +12,8 @@ class About extends Model{
         $res=$this->db()->where('id',1)->update($data);
         return $res;
     }
+    public function joinedit($data){
+        $res=$this->db()->where('id',2)->update($data);
+        return $res;
+    }
 }

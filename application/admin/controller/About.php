@@ -26,4 +26,20 @@ class About extends Common{
             }
         }
     }
+    public function join(){
+        $content=$this->db->find(2);
+        return $this->fetch('',[
+            'content'=>$content
+        ]);
+    }
+    public function joinedit(Request $request){
+        if($request->isPost()){
+            $res=$this->db->joinedit(input('post.'));
+            if($res){
+                $this->success('更新内容成功');
+            }else{
+                $this->error('更新内容失败');
+            }
+        }
+    }
 }

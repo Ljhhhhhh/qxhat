@@ -10,6 +10,7 @@ class Product extends Model{
             ->alias('a')
             ->join('qxhat_products_brand b','a.brand_id=b.brand_id')
             ->join('qxhat_products_style c','a.product_style_id=c.product_style_id')
+            ->order('update_time desc')
             ->paginate(10);
         return $product_list;
     }

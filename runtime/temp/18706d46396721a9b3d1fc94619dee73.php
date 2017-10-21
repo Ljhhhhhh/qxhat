@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:71:"E:\xampp\htdocs\qxhat\public/../application/admin\view\about\index.html";i:1507548947;s:66:"E:\xampp\htdocs\qxhat\public/../application/admin\view\header.html";i:1507276203;s:64:"E:\xampp\htdocs\qxhat\public/../application/admin\view\menu.html";i:1507600780;s:66:"E:\xampp\htdocs\qxhat\public/../application/admin\view\footer.html";i:1507097252;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:71:"E:\xampp\htdocs\qxhat\public/../application/admin\view\about\index.html";i:1507548947;s:66:"E:\xampp\htdocs\qxhat\public/../application/admin\view\header.html";i:1507276203;s:64:"E:\xampp\htdocs\qxhat\public/../application/admin\view\menu.html";i:1508567834;s:66:"E:\xampp\htdocs\qxhat\public/../application/admin\view\footer.html";i:1507097252;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -65,6 +65,8 @@
             <dd>
                 <ul>
                     <li><a href="<?php echo url('About/index'); ?>" title="关于我们">关于我们</a></li>
+                    <li><a href="<?php echo url('About/join'); ?>" title="关于我们">代理加盟</a></li>
+
                 </ul>
             </dd>
         </dl>
